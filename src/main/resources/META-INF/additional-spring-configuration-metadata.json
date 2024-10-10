@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "session.header.name",
+      "type": "java.lang.String",
+      "description": "Name of the header that contains the session token"
+    }
+  ] }

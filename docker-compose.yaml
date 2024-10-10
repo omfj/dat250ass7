@@ -1,0 +1,20 @@
+services:
+  kotlin:
+    build: .
+    container_name: spring
+    ports:
+      - "8080:8080"
+    depends_on:
+        - db
+    network_mode: "host"
+
+  db:
+    image: postgres:16
+    container_name: db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    network_mode: "host"
